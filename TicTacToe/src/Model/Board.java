@@ -3,8 +3,6 @@ package Model;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.sun.tools.javac.util.Pair;
-
 public class Board {
 
     public int size;
@@ -29,8 +27,7 @@ public class Board {
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
                 if (board[i][j] == null) {
-                    Pair<Integer, Integer> rowColumn = new Pair<>(i, j);
-                    freeCells.add(rowColumn);
+                    freeCells.add(new Pair<>(i,j));
                 }
             }
         }
